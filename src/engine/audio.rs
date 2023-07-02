@@ -34,14 +34,14 @@ impl AudioEngine {
             .unwrap(),
         ));
 
-        let mut phasor = 0.0;
-        let mut phasor_inc = 440.0 / sample_rate as f32;
-        let mut state = 0;
-        let mut state_timer = 0.0;
-        let state_duration = 10.0;
-        let delta_frequency = 2.0;
+        let mut phasor: f32 = 0.0;
+        let mut phasor_inc = 2.0 * PI * 220.0 / sample_rate as f32;
+        let mut frequency = 220.0;
+        let mut target_frequency = 880.0;
+        let mut frequency_step = (target_frequency - frequency) / (sample_rate as f32 * 2.0);
+        let mut direction = 1;
 
-        let stream_mutex_clone = stream_mutex.clone();
+        let _stream_mutex_clone = stream_mutex.clone();
 
         stream_mutex.lock().unwrap().start(
             move |buffers: Buffers<'_>, _info: &StreamInfo, _status: StreamStatus| {
@@ -49,20 +49,25 @@ impl AudioEngine {
                     let frames = output.len() / 2;
 
                     for i in 0..frames {
-                        let val = (phasor * PI * 2.0).sin() * 0.5;
+                        let val = (phasor).sin() * 0.5;
 
                         // By default, buffers are interleaved.
                         output[i * 2] = val;
                         output[(i * 2) + 1] = val;
 
-                        phasor = (phasor + phasor_inc).fract();
+                        phasor += phasor_inc;
 
-                        state_timer += 1.0 / sample_rate as f32;
-                        if state_timer >= state_duration {
-                            state_timer = 0.0;
-                            state = (state + 1) % 4;
-                            phasor_inc += delta_frequency;
+                        frequency += frequency_step;
+                        if frequency >= target_frequency {
+                            target_frequency = 220.0;
+                            direction = -1;
+                            frequency_step = (target_frequency - frequency) / (sample_rate as f32 * 2.0);
+                        } else if frequency <= 220.0 {
+                            target_frequency = 880.0;
+                            direction = 1;
+                            frequency_step = (target_frequency - frequency) / (sample_rate as f32 * 2.0);
                         }
+                        phasor_inc = 2.0 * PI * frequency / sample_rate as f32;
                     }
                 }
             },
