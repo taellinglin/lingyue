@@ -7,10 +7,11 @@ authors = ["Ling Lin <taellinglin@gmail.com>"]
 rtaudio = "0.2.1"
 eframe = "0.22.0"
 egui = "0.22.0"
+serde = { version = "1.0", features = ["derive"] }
+env_logger = "0.9"
 
-# If your project needs a specific version of the Rust compiler
-[package.metadata.rust]
-channel = "1.50.0"
+[dependencies.egui_tiles]
+version = "0.1.0"
 
-[build-dependencies]
-# If your build requires some additional crates, please specify them here. 
+[dependencies.pcg_rand]
+version = "0.9.0"
