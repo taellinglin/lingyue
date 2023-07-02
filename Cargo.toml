@@ -1,11 +1,12 @@
 [package]
 name = "lingyue"
 version = "0.1.0"
-authors = ["Taelling Lin <taellinglin@gmail.com>"]
+authors = ["Ling Lin <taellinglin@gmail.com>"]
 
 [dependencies]
 rtaudio = "0.2.1"
-egui = "0.13.0" # Latest version as of my knowledge cut-off in September 2021.
+eframe = "0.22.0"
+egui = "0.22.0"
 
 # If your project needs a specific version of the Rust compiler
 [package.metadata.rust]
