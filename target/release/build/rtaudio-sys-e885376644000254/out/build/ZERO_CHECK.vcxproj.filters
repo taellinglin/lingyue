@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\CMakeFiles\7fe1687239bbd225275de4b368a0522e\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\cmake\RtAudioConfigUninstall.cmake.in">
+      <Filter>Buildsystem Input Files\cmake</Filter>
+    </None>
+    <None Include="C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\rtaudio.pc.in">
+      <Filter>Buildsystem Input Files</Filter>
+    </None>
+    <None Include="C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\CMakeLists.txt">
+      <Filter>Buildsystem Input Files\tests</Filter>
+    </None>
+    <None Include="C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\RtAudioConfig.cmake.in">
+      <Filter>Buildsystem Input Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0BC70381-1ABE-3358-9CA4-9836B13E325B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1FDE78F4-6323-359E-B996-78753E0343AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buildsystem Input Files">
+      <UniqueIdentifier>{E2094E12-7B28-3A13-BFB0-60FB39D98272}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buildsystem Input Files\cmake">
+      <UniqueIdentifier>{BDD57010-8D6B-325D-9506-9B9C0C062DCB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buildsystem Input Files\tests">
+      <UniqueIdentifier>{831D40A6-5451-3D75-8389-17CB5C3D46ED}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

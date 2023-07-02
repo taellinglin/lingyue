@@ -1,0 +1,10 @@
+^C:\林乐\LINGYUE\TARGET\DEBUG\BUILD\RTAUDIO-SYS-38FD123998EED272\OUT\BUILD\CMAKEFILES\4345067F042642CDBC8A8223640974DD\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

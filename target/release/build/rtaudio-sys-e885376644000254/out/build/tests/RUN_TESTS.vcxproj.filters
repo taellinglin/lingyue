@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\CMakeFiles\d5ecb8d54d4324c2d1050d8267510179\RUN_TESTS_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0BC70381-1ABE-3358-9CA4-9836B13E325B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

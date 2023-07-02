@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\testall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6A70340A-0D4D-3BBD-A53D-E9AC8C7D5DE7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

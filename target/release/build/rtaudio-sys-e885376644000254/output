@@ -1,0 +1,127 @@
+cargo:rustc-link-lib=winmm
+cargo:rustc-link-lib=ole32
+cargo:rustc-link-lib=user32
+cargo:rustc-link-lib=dsound
+cargo:rustc-link-lib=ksuser
+cargo:rustc-link-lib=mfplat
+cargo:rustc-link-lib=mfuuid
+cargo:rustc-link-lib=wmcodecdspuuid
+CMAKE_TOOLCHAIN_FILE_x86_64-pc-windows-msvc = None
+CMAKE_TOOLCHAIN_FILE_x86_64_pc_windows_msvc = None
+HOST_CMAKE_TOOLCHAIN_FILE = None
+CMAKE_TOOLCHAIN_FILE = None
+CMAKE_GENERATOR_x86_64-pc-windows-msvc = None
+CMAKE_GENERATOR_x86_64_pc_windows_msvc = None
+HOST_CMAKE_GENERATOR = None
+CMAKE_GENERATOR = None
+CMAKE_PREFIX_PATH_x86_64-pc-windows-msvc = None
+CMAKE_PREFIX_PATH_x86_64_pc_windows_msvc = None
+HOST_CMAKE_PREFIX_PATH = None
+CMAKE_PREFIX_PATH = None
+CMAKE_x86_64-pc-windows-msvc = None
+CMAKE_x86_64_pc_windows_msvc = None
+HOST_CMAKE = None
+CMAKE = None
+running: "cmake" "C:\\Users\\User\\.cargo\\registry\\src\\index.crates.io-6f17d22bba15001f\\rtaudio-sys-0.3.0\\rtaudio" "-G" "Visual Studio 17 2022" "-Thost=x64" "-Ax64" "-DBUILD_SHARED_LIBS=OFF" "-DRTAUDIO_BUILD_STATIC_LIBS=ON" "-DRTAUDIO_API_DS=ON" "-DRTAUDIO_API_ASIO=OFF" "-DRTAUDIO_API_WASAPI=ON" "-DCMAKE_INSTALL_PREFIX=C:\\林乐\\lingyue\\target\\release\\build\\rtaudio-sys-e885376644000254\\out" "-DCMAKE_C_FLAGS= -nologo -MD -Brepro" "-DCMAKE_C_FLAGS_RELEASE= -nologo -MD -Brepro" "-DCMAKE_CXX_FLAGS= -nologo -MD -Brepro" "-DCMAKE_CXX_FLAGS_RELEASE= -nologo -MD -Brepro" "-DCMAKE_ASM_FLAGS= -nologo -MD -Brepro" "-DCMAKE_ASM_FLAGS_RELEASE= -nologo -MD -Brepro" "-DCMAKE_BUILD_TYPE=Release"
+-- Selecting Windows SDK version 10.0.22000.0 to target Windows 10.0.22621.
+-- The CXX compiler identification is MSVC 19.36.32535.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+-- Looking for gettimeofday
+-- Looking for gettimeofday - not found
+-- Compiling with support for: ds wasapi
+-- Configuring done (4.1s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build
+running: "cmake" "--build" "." "--target" "install" "--config" "Release" "--parallel" "12"
+MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/CMakeLists.txt
+  RtAudio.cpp
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\RtAudio.cpp(6978,9): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\rtaudio.vcxproj]
+  rtaudio_c.cpp
+  ???????...
+  rtaudio.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\Release\rtaudio.lib
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/tests/CMakeLists.txt
+  audioprobe.cpp
+  playraw.cpp
+  record.cpp
+  duplex.cpp
+  playsaw.cpp
+  teststops.cpp
+  apinames.cpp
+  testall.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(305,1): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\playraw.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(378,1): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\audioprobe.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(371,39): message : ??? ?????? ?????? 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned __int64)' ??????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\audioprobe.vcxproj]
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\audioprobe.cpp(32,62): message : 'listApis' ? 'std::basic_ostream<char,std::char_traits<char>>::operator <<' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\audioprobe.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(671,75): message : ???????? ??? ?????? ??????? 'std::basic_ostream<char,std::char_traits<char>>' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\audioprobe.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(298,39): message : ??? ?????? ?????? 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)' ??????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\playraw.vcxproj]
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\playraw.cpp(73,62): message : 'getDeviceIndex' ? 'std::basic_ostream<char,std::char_traits<char>>::operator <<' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\playraw.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(671,75): message : ???????? ??? ?????? ??????? 'std::basic_ostream<char,std::char_traits<char>>' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\playraw.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(414,1): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\record.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(305,1): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\teststops.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(407,39): message : ??? ?????? ?????? 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)' ??????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\record.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(298,39): message : ??? ?????? ?????? 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned int)' ??????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\teststops.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(414,1): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\duplex.vcxproj]
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\teststops.cpp(51,62): message : 'getDeviceIndex' ? 'std::basic_ostream<char,std::char_traits<char>>::operator <<' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\teststops.vcxproj]
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\record.cpp(170,129): message : 'main' ? 'std::basic_ostream<char,std::char_traits<char>>::operator <<' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\record.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(407,39): message : ??? ?????? ?????? 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)' ??????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\duplex.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(671,75): message : ???????? ??? ?????? ??????? 'std::basic_ostream<char,std::char_traits<char>>' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\teststops.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(671,75): message : ???????? ??? ?????? ??????? 'std::basic_ostream<char,std::char_traits<char>>' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\record.vcxproj]
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\duplex.cpp(80,48): message : 'inout' ? 'std::basic_ostream<char,std::char_traits<char>>::operator <<' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\duplex.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(671,75): message : ???????? ??? ?????? ??????? 'std::basic_ostream<char,std::char_traits<char>>' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\duplex.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(287,1): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\apinames.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(272,39): message : ??? ?????? ?????? 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' ??????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\apinames.vcxproj]
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\apinames.cpp(26,66): message : 'test_cpp' ? 'std::basic_ostream<char,std::char_traits<char>>::operator <<' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\apinames.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(671,75): message : ???????? ??? ?????? ??????? 'std::basic_ostream<char,std::char_traits<char>>' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\apinames.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(324,1): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\testall.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(317,39): message : ??? ?????? ?????? 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(long)' ??????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\testall.vcxproj]
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\testall.cpp(169,64): message : 'main' ? 'std::basic_ostream<char,std::char_traits<char>>::operator <<' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\testall.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(671,75): message : ???????? ??? ?????? ??????? 'std::basic_ostream<char,std::char_traits<char>>' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\testall.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(414,1): warning C4530: C++ ??????????????????? ??????????????????/EHsc ?????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\playsaw.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(407,39): message : ??? ?????? ?????? 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(double)' ??????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\playsaw.vcxproj]
+C:\Users\User\.cargo\registry\src\index.crates.io-6f17d22bba15001f\rtaudio-sys-0.3.0\rtaudio\tests\playsaw.cpp(118,48): message : 'saw' ? 'std::basic_ostream<char,std::char_traits<char>>::operator <<' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\playsaw.vcxproj]
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.36.32532\include\ostream(671,75): message : ???????? ??? ?????? ??????? 'std::basic_ostream<char,std::char_traits<char>>' ???????????????? [C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\playsaw.vcxproj]
+     ????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/playraw.lib ??????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/playraw.exp ????
+     ????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/apinames.lib ??????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/apinames.exp ????
+     ????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/record.lib ??????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/record.exp ????
+     ????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/audioprobe.lib ??????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/audioprobe.exp ????
+  playraw.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\playraw.exe
+     ????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/duplex.lib ??????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/duplex.exp ????
+     ????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/testall.lib ??????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/testall.exp ????
+     ????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/teststops.lib ??????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/teststops.exp ????
+  apinames.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\apinames.exe
+  record.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\record.exe
+     ????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/playsaw.lib ??????? C:/??/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/build/tests/Release/playsaw.exp ????
+  audioprobe.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\audioprobe.exe
+  duplex.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\duplex.exe
+  testall.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\testall.exe
+  teststops.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\teststops.exe
+  playsaw.vcxproj -> C:\??\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\playsaw.exe
+  Building Custom Rule C:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio/CMakeLists.txt
+  1>
+  -- Install configuration: "Release"
+  -- Installing: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/lib/rtaudio.lib
+  -- Installing: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/include/rtaudio/RtAudio.h
+  -- Installing: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/include/rtaudio/rtaudio_c.h
+  -- Installing: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/share/rtaudio/RtAudioConfig.cmake
+  -- Installing: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/share/rtaudio/RtAudioConfig-version.cmake
+  -- Installing: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/share/rtaudio/RtAudioTargets.cmake
+  -- Installing: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/share/rtaudio/RtAudioTargets-release.cmake
+  -- Installing: C:/林乐/lingyue/target/release/build/rtaudio-sys-e885376644000254/out/lib/pkgconfig/rtaudio.pc
+cargo:root=C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out
+cargo:rustc-link-search=native=C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\lib
+cargo:rustc-link-lib=static=rtaudiod

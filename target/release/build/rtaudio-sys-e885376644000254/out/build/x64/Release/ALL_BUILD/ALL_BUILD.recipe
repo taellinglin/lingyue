@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\apinames.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\audioprobe.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\duplex.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\playraw.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\playsaw.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\record.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\testall.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\tests\Release\teststops.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\林乐\lingyue\target\release\build\rtaudio-sys-e885376644000254\out\build\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

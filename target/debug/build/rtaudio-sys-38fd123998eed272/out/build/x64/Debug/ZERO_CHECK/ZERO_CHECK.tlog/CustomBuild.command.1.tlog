@@ -1,0 +1,10 @@
+^C:\林乐\LINGYUE\TARGET\DEBUG\BUILD\RTAUDIO-SYS-38FD123998EED272\OUT\BUILD\CMAKEFILES\4345067F042642CDBC8A8223640974DD\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/User/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rtaudio-sys-0.3.0/rtaudio -BC:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/build/RtAudio.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

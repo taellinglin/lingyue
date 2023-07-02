@@ -1,0 +1,15 @@
+[package]
+name = "lingyue"
+version = "0.1.0"
+authors = ["Taelling Lin <taellinglin@gmail.com>"]
+
+[dependencies]
+rtaudio = "0.2.1"
+egui = "0.13.0" # Latest version as of my knowledge cut-off in September 2021.
+
+# If your project needs a specific version of the Rust compiler
+[package.metadata.rust]
+channel = "1.50.0"
+
+[build-dependencies]
+# If your build requires some additional crates, please specify them here. 
