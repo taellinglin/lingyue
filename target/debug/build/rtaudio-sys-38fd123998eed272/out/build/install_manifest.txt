@@ -1,8 +1,0 @@
-C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/lib/rtaudiod.lib
-C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/include/rtaudio/RtAudio.h
-C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/include/rtaudio/rtaudio_c.h
-C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/share/rtaudio/RtAudioConfig.cmake
-C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/share/rtaudio/RtAudioConfig-version.cmake
-C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/share/rtaudio/RtAudioTargets.cmake
-C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/share/rtaudio/RtAudioTargets-debug.cmake
-C:/林乐/lingyue/target/debug/build/rtaudio-sys-38fd123998eed272/out/lib/pkgconfig/rtaudio.pc
