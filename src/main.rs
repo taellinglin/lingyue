@@ -10,10 +10,11 @@ fn main() {
 
     let audio_engine = AudioEngine::initialize_audio(sample_rate, buffer_length);
 
-    // ... Rest of your program logic ...
-
-    // Check for errors
     if let Some(error) = audio_engine.check_for_errors() {
-        eprintln!("Audio error: {}", error);
+        println!("An error occurred: {}", error);
+    } else {
+        println!("Audio engine started. Press Ctrl+C to exit.");
+        std::thread::sleep(std::time::Duration::from_secs(u64::max_value()));
     }
+
 }

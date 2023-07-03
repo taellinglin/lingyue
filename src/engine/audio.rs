@@ -4,6 +4,7 @@ use rtaudio::{
 use std::sync::mpsc::{Receiver, channel};
 use std::sync::{Arc, Mutex};
 use std::f32::consts::PI;
+use std::time::{Instant, Duration};
 
 pub struct AudioEngine {
     error_rx: Receiver<RtAudioError>,
@@ -21,7 +22,7 @@ impl AudioEngine {
             host.open_stream(
                 Some(DeviceParams {
                     device_id: out_device.id,
-                    num_channels: out_device_info.output_channels as u32,
+                    num_channels: 2, // Stereo output
                     first_channel: 0,
                 }),
                 None,
@@ -34,12 +35,25 @@ impl AudioEngine {
             .unwrap(),
         ));
 
-        let mut phasor: f32 = 0.0;
-        let mut phasor_inc = 2.0 * PI * 220.0 / sample_rate as f32;
-        let mut frequency = 220.0;
-        let mut target_frequency = 880.0;
-        let mut frequency_step = (target_frequency - frequency) / (sample_rate as f32 * 2.0);
-        let mut direction = 1;
+        let brainwave_states = vec![
+            40.0,  // Gamma
+            30.0,  // Beta
+            14.0,  // Alpha
+            8.0,   // Theta
+            2.0,   // Delta
+        ];
+
+        let mut current_state_index = 0;
+        let mut current_frequency = brainwave_states[current_state_index];
+        let mut next_frequency = brainwave_states[(current_state_index + 1) % brainwave_states.len()];
+
+        let mut phasor_a: f32 = 0.0;
+        let mut phasor_b: f32 = 0.5; // Phase offset of 0.5
+        let mut phasor_inc_a = 0.0; // Will be updated dynamically
+        let mut phasor_inc_b = 0.0; // Will be updated dynamically
+
+        let mut start_time = Instant::now();
+        let state_duration = Duration::from_secs(30); // Duration for each brainwave state
 
         let _stream_mutex_clone = stream_mutex.clone();
 
@@ -49,25 +63,37 @@ impl AudioEngine {
                     let frames = output.len() / 2;
 
                     for i in 0..frames {
-                        let val = (phasor).sin() * 0.5;
+                        let elapsed_time = start_time.elapsed();
+                        if elapsed_time >= state_duration {
+                            // Switch to the next brainwave state
+                            current_state_index = (current_state_index + 1) % brainwave_states.len();
+                            current_frequency = brainwave_states[current_state_index];
+                            next_frequency = brainwave_states[(current_state_index + 1) % brainwave_states.len()];
+                            start_time = Instant::now();
+                        }
+
+                        // Smooth transition between current and next frequency
+                        let transition_ratio = elapsed_time.as_secs_f32() / state_duration.as_secs_f32();
+                        let frequency = (1.0 - transition_ratio) * current_frequency + transition_ratio * next_frequency;
+                        phasor_inc_a = 2.0 * PI * (110.0 + frequency) / sample_rate as f32;
+                        phasor_inc_b = 2.0 * PI * (110.0 + frequency) / sample_rate as f32;
+
+                        let left_val = phasor_a.sin();
+                        let right_val = phasor_b.sin();
 
                         // By default, buffers are interleaved.
-                        output[i * 2] = val;
-                        output[(i * 2) + 1] = val;
+                        output[i * 2] = left_val;
+                        output[(i * 2) + 1] = right_val;
 
-                        phasor += phasor_inc;
+                        phasor_a += phasor_inc_a;
+                        phasor_b += phasor_inc_b;
 
-                        frequency += frequency_step;
-                        if frequency >= target_frequency {
-                            target_frequency = 220.0;
-                            direction = -1;
-                            frequency_step = (target_frequency - frequency) / (sample_rate as f32 * 2.0);
-                        } else if frequency <= 220.0 {
-                            target_frequency = 880.0;
-                            direction = 1;
-                            frequency_step = (target_frequency - frequency) / (sample_rate as f32 * 2.0);
+                        if phasor_a > 2.0 * PI {
+                            phasor_a -= 2.0 * PI;
                         }
-                        phasor_inc = 2.0 * PI * frequency / sample_rate as f32;
+                        if phasor_b > 2.0 * PI {
+                            phasor_b -= 2.0 * PI;
+                        }
                     }
                 }
             },
